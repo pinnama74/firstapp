@@ -1,5 +1,7 @@
+from flask import render_template, flash, redirect, url_for
 from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, Greetings From Raju & Sowjanya"
+    user = {'username': 'Siddhu'}
+    return render_template('main.html', title='Home', user=user)
